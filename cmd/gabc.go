@@ -1,8 +1,9 @@
 package cmd
 
 import (
-	"fmt"
+	"github.com/igneus/go-gly/gly"
 	"github.com/spf13/cobra"
+	"os"
 )
 
 func init() {
@@ -11,9 +12,9 @@ func init() {
 
 var gabcCmd = &cobra.Command{
 	Use:   "gabc",
-	Short: "Convert gly go gabc",
+	Short: "Convert gly to gabc",
 	Long:  `Expects gly document, produces one or more gabc files.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Hey, happily here. But it doesn't do anything yet.")
+		gly.Parse(os.Stdin)
 	},
 }
