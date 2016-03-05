@@ -11,6 +11,6 @@ var RootCmd = &cobra.Command{
 for readability and comfort of the author/transcriber.
 This utility translates it to regular gabc.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		// Do Stuff Here
+		cmd.UsageFunc()(cmd)
 	},
 }
