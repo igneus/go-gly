@@ -15,6 +15,7 @@ var gabcCmd = &cobra.Command{
 	Short: "Convert gly to gabc",
 	Long:  `Expects gly document, produces one or more gabc files.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		gly.Parse(os.Stdin)
+		var parser gly.Parser
+		parser.Parse(os.Stdin)
 	},
 }
